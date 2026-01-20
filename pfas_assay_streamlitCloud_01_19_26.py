@@ -543,7 +543,7 @@ if __name__ == '__main__':
         st.session_state['directory'] = BASE_DIR
         
     # Use this for cloud
-    st.session_state['logo'] = 'mote_logo.png'
+    st.session_state['logo'] = 'logo-black.png'
         
     # Load image for favicon
     logo_img = Image.open(st.session_state['logo'])
