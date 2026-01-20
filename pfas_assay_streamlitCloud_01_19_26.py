@@ -506,7 +506,12 @@ class Display_Results():
     def download_results(self, edited_tables, filename="PFAS_results_all_files.csv"):
 
         if not edited_tables:
-            st.warning("No results available to download.")
+            
+            col1, col2 = st.columns([2.5,1])
+            
+            with col1:
+                st.success("Upload files.")
+                
             return
     
         combined = []
