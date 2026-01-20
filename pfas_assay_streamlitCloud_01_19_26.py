@@ -507,7 +507,7 @@ class Display_Results():
 
         if not edited_tables:
             
-            col1, col2 = st.columns([1,3])
+            col1, col2 = st.columns([1,5])
             
             with col1:
                 st.success("Upload files.")
