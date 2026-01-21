@@ -303,8 +303,8 @@ class Calculate_Concs():
             # If rfu <= the low and high range, the np array gets reset
             below = rfu <= low
             above = rfu >= high
-            flag[below] = "Below Assay LLOD"
-            flag[above] = "PFAS Detected Above Quantifiable Range"
+            flag[below] = "PFAS Detected Above Quantifiable Range"
+            flag[above] = "Below Assay LLOD"
     
             # Only compute for in-range values
             in_range = ~(below | above) & np.isfinite(rfu)
