@@ -42,7 +42,7 @@ class Flow_Control():
                             'D':1.333633932492387,
                             # Standards concentrations in nM
                             'std1_set_conc':10,
-                            'std2_set_conc':100,
+                            'std2_set_conc':5000,
                             # PFOA MW for conversion to ppb
                             'pfoa_MW':413.06
                             }
