@@ -237,13 +237,25 @@ class Load_Data():
             # Get filename but strip the .csv
             filename = file.name[:-4]
             df = pd.read_csv(file) 
+
+            # Extract relevant columns
             selected_cols = ['Sample Name', 'Blue RFU']
             df = df[selected_cols]
 
-            # Strip out "," and convert RFU float
+            # Strip out "," and convert RFU to float
+            # df["Blue RFU"] = (
+                              # df["Blue RFU"]
+                              # .astype(str)
+                              # .str.replace(",", "", regex=False)
+                              # .str.strip()
+                             # )
+
+            blue_string = df["Blue RFU"].astype("string")
+
             df["Blue RFU"] = (
-                              df["Blue RFU"]
-                              .astype(str)
+                              blue_string
+                              .str.replace("\u00a0", "", regex=False)   # NBSP
+                              .str.replace("\u200b", "", regex=False)   # zero-width space
                               .str.replace(",", "", regex=False)
                               .str.strip()
                              )
