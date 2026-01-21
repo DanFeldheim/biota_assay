@@ -239,6 +239,9 @@ class Load_Data():
             df = pd.read_csv(file)
             selected_cols = ['Sample Name', 'Blue RFU']
             df = df[selected_cols]
+            # Make sure RFU col is integer
+            df["Blue RFU"] = pd.to_numeric(df["Blue RFU"], errors="coerce").fillna(0).astype(int)
+            
             data_dict[filename] = df
             
         return data_dict
