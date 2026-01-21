@@ -768,9 +768,11 @@ class Display_Results():
 if __name__ == '__main__':
 
     st.session_state["logo"] = "logo-no-background.png"
+    st.session_state["favicon"] = "logo-black.png"
     
     # Load image for favicon
-    logo_img = Image.open(st.session_state['logo'])
+    # logo_img = Image.open(st.session_state['logo'])
+    logo_img = Image.open(st.session_state['favicon'])
         
     # Page config
     st.set_page_config(layout = "wide", 
