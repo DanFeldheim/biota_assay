@@ -754,11 +754,11 @@ if __name__ == '__main__':
         st.session_state['directory'] = BASE_DIR
         
     # Use this for cloud
-    # st.session_state['logo'] = 'logo-black.png'
+    st.session_state['logo'] = 'logo-black.png'
     
     # Use this for local machine
-    if 'logo' not in st.session_state:
-        st.session_state['logo'] = BASE_DIR + '/logo-black.png'
+    # if 'logo' not in st.session_state:
+        # st.session_state['logo'] = BASE_DIR + '/logo-black.png'
         
     # Load image for favicon
     logo_img = Image.open(st.session_state['logo'])
