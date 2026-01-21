@@ -564,7 +564,7 @@ class Display_Results():
           
             # Write the filename
             st.markdown(f"<p style='color: Green; \
-                  font-size: 24px; \
+                  font-size: 20px; \
                   margin: 0;'>File: {filename}</p>",
                   unsafe_allow_html=True)
                 
