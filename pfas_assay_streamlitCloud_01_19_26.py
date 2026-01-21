@@ -766,13 +766,8 @@ class Display_Results():
   
 # Run 
 if __name__ == '__main__':
-    
-    BASE_DIR = Path(__file__).resolve().parent
-    LOGO_PATH = BASE_DIR / "logo-no-background.png"
 
-    st.session_state["logo"] = str(LOGO_PATH)
-
-    logo_img = Image.open(LOGO_PATH)
+    st.session_state["logo"] = "logo-no-background.png"
     
     # Load image for favicon
     logo_img = Image.open(st.session_state['logo'])
