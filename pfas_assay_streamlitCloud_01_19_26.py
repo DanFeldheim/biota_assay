@@ -755,19 +755,13 @@ class Display_Results():
 # Run 
 if __name__ == '__main__':
     
-    # Get the path relative to the current file (inside Docker container)
-    # BASE_DIR = os.path.dirname(__file__)
+    BASE_DIR = Path(__file__).resolve().parent
+    LOGO_PATH = BASE_DIR / "logo-no-background.png"
+
+    st.session_state["logo"] = str(LOGO_PATH)
+
+    logo_img = Image.open(LOGO_PATH)
     
-    # if 'directory' not in st.session_state:
-        # st.session_state['directory'] = BASE_DIR
-        
-    # Use this for cloud
-    st.session_state['logo'] = 'logo-no-background.png'
-    
-    # Use this for local machine
-    # if 'logo' not in st.session_state:
-    #     st.session_state['logo'] = BASE_DIR + '/logo-no-background.png'
-        
     # Load image for favicon
     logo_img = Image.open(st.session_state['logo'])
         
