@@ -36,10 +36,10 @@ class Flow_Control():
         # Store fit parameters and standard concentrations in a dict
         self.params_dict = {
                             # 4PL fit parameters from calibration curve
-                            'A':3227.880527341498,
-                            'B':6937.646695092012,
-                            'C':285.4883701165076,
-                            'D':1.333633932492387,
+                            'A':3096.082204433693,
+                            'B':6423.412709072206,
+                            'C':286.8973173597928,
+                            'D':1.61008049679831,
                             # Standards concentrations in nM
                             'std1_set_conc':10,
                             'std2_set_conc':5000,
