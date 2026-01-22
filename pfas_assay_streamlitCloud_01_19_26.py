@@ -245,17 +245,9 @@ class Load_Data():
             # Extract relevant columns
             selected_cols = ['Sample Name', 'Blue RFU']
             df = df[selected_cols]
-
-            # Strip out "," and convert RFU to float
-            # df["Blue RFU"] = (
-                              # df["Blue RFU"]
-                              # .astype(str)
-                              # .str.replace(",", "", regex=False)
-                              # .str.strip()
-                             # )
-
             blue_string = df["Blue RFU"].astype("string")
 
+            # Strip commas from string
             df["Blue RFU"] = (
                               blue_string
                               .str.replace("\u00a0", "", regex=False)   # NBSP
@@ -263,9 +255,10 @@ class Load_Data():
                               .str.replace(",", "", regex=False)
                               .str.strip()
                              )
-            
+            # Convert to float
             df["Blue RFU"] = pd.to_numeric(df["Blue RFU"], errors="coerce").fillna(0).astype(float)
-            
+
+            # Add df to dict
             data_dict[filename] = df
             
         return data_dict
