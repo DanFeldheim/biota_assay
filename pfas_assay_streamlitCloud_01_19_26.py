@@ -371,6 +371,9 @@ class Calculate_Concs():
             col1, col2 = st.columns([1.5,1])
             
             # Get the standard concentration values as pandas series
+            # Catch all forms of sample name like Std1, STD1, STD 1
+            df["Sample Name"] = df["Sample Name"].astype(str).str.strip().str.lower()
+            # Get conc
             std1_measured = df.loc[df["Sample Name"] == "std1", "Concentration"]
             std2_measured = df.loc[df["Sample Name"] == "std2", "Concentration"]
            
