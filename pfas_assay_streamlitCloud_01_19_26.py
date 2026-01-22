@@ -375,8 +375,11 @@ class Calculate_Concs():
             sn = df["Sample Name"].astype("string").str.strip().str.lower()
             
             # Get conc
-            std1_measured = df.loc[df["Sample Name"] == "std1", "Concentration"]
-            std2_measured = df.loc[df["Sample Name"] == "std2", "Concentration"]
+            std1_measured = df.loc[sn == "std1", "Concentration"]
+            std2_measured = df.loc[sn == "std2", "Concentration"]
+            
+            # std1_measured = df.loc[df["Sample Name"] == "std1", "Concentration"]
+            # std2_measured = df.loc[df["Sample Name"] == "std2", "Concentration"]
            
             if std1_measured.empty or std2_measured.empty:
                 
