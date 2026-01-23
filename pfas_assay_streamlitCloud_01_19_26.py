@@ -48,7 +48,7 @@ class Flow_Control():
                             # Set an LLOD of 60 nM in RFU units
                             # Use the 4pl fit params to convert 60 nM to RFU
                             # Any RFU larger than this will not be detectable
-                            'RFU_LOD':6526
+                            'RFU_LOD':6175.500
                             }
          
         
