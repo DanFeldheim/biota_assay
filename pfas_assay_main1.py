@@ -832,16 +832,16 @@ if __name__ == '__main__':
         st.session_state['directory'] = BASE_DIR
 
     # Use these for cloud
-    # st.session_state["logo"] = "logo-no-background.png"
-    # # Store favicon image
-    # st.session_state["favicon"] = "logo-black.png"
+    st.session_state["logo"] = "logo-no-background.png"
+    # Store favicon image
+    st.session_state["favicon"] = "logo-black.png"
     
     # Use these for local machine
-    if 'logo' not in st.session_state:
-        st.session_state['logo'] = BASE_DIR + '/logo-no-background.png'
+    # if 'logo' not in st.session_state:
+        # st.session_state['logo'] = BASE_DIR + '/logo-no-background.png'
         
-    if 'favicon' not in st.session_state:
-        st.session_state['favicon'] = BASE_DIR + '/logo-black.png'
+    # if 'favicon' not in st.session_state:
+        # st.session_state['favicon'] = BASE_DIR + '/logo-black.png'
     
     # Load image for favicon
     logo_img = Image.open(st.session_state['favicon'])
