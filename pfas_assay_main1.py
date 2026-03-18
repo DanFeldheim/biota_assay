@@ -42,10 +42,10 @@ class Flow_Control():
         self.params_dict = {
                             # 4PL fit parameters from calibration curve
                             # Calculate these with 4pl_script_version.py
-                            'A':3096.082204433693,
-                            'B':6423.412709072206,
-                            'C':286.8973173597928,
-                            'D':1.61008049679831,
+                            'A':2270.115525130363,
+                            'B':5684.595655632271,
+                            'C':296.1631890825121,
+                            'D':1.2650894385066418,
                             
                             # Standards predicted RFU (if calculated offline 
                             # using using the fit parameters from calibration curve)
@@ -54,8 +54,8 @@ class Flow_Control():
                             
                             # Standards in nM (converted to predicted RFU using 
                             # the four_pl() below))
-                            'std1_set_conc':10,
-                            'std2_set_conc':5000,
+                            'std1_set_conc':0,
+                            'std2_set_conc':12077,
                             
                             # PFOA MW for conversion to ppb
                             'pfas_MW':413.06,
