@@ -832,7 +832,7 @@ if __name__ == '__main__':
         st.session_state['directory'] = BASE_DIR
 
     # Use these for cloud
-    st.session_state["logo"] = "logo-no-background.png"
+    st.session_state["logo"] = "logo_new.png"
     # Store favicon image
     st.session_state["favicon"] = "logo-black.png"
     
