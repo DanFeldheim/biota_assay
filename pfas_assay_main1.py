@@ -900,14 +900,14 @@ class Display_Results():
     
         # Download buttons
         st.download_button(
-                          label="Download Summary Table",
+                          label="Download Summary Tables",
                           data=ppb_csv_str,
                           file_name="summary_table.csv",
                           mime="text/csv",
                           )
     
         st.download_button(
-                          label="Download Replicates Table",
+                          label="Download Replicates Tables",
                           data=replicates_csv_str,
                           file_name="replicates_table.csv",
                           mime="text/csv",
