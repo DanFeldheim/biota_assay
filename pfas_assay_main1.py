@@ -455,7 +455,7 @@ class Calculate_Concs():
                 
                 with col1:
                     
-                    st.error('At least one of the standards is missing.  \nThe following calculations will \
+                    st.error('Std1 and/or Std2 are missing.  \nThe following calculations will \
                              be performed without correcting for instrument drift.')
                 
                 # Make sure the df gets the adjusted_rfu column
